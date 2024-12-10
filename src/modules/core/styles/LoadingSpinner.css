@@ -1,0 +1,69 @@
+@keyframes animation-loading-spinner-span {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-loading-spinner-circle {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px;
+  }
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -125px;
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-spinner > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.loading-spinner > div:first-child {
+  margin-top: unset;
+}
+
+.loading-spinner > div:first-child > span {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  color: rgb(25, 118, 210);
+  animation: animation-loading-spinner-span 1.4s linear infinite;
+}
+
+.loading-spinner > div:first-child > span > svg {
+  display: block;
+  overflow-x: hidden;
+  color: rgb(25, 118, 210);
+}
+
+.loading-spinner > div:first-child > span > svg > circle {
+  stroke: currentColor;
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0;
+  -webkit-animation: animation-loading-spinner-circle 1.4s ease-in-out infinite;
+  animation: animation-loading-spinner-circle 1.4s ease-in-out infinite;
+}

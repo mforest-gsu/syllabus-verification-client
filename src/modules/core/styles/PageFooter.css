@@ -1,0 +1,26 @@
+footer {
+  color: #fff;
+  background-color: #0033a0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+footer .page-footer {
+  margin: 20px 0;
+  font-size: 12px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+footer hr.divider {
+  border-color: #999;
+}
